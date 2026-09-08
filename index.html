@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,268 +8,228 @@
   <link rel="icon" type="image/x-icon" href="../Portafolio LM - Studio/img/logo.png">
   <title>Portafolio - LM Studio</title>
 </head>
-<body>
+<body class="bg-neutral-primary-soft">
 
-  <!-- Navigation -->
-<nav class="bg-neutral-primary fixed w-full z-20 top-0 start-0 border-b border-default">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-    <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <img src="../Portafolio LM - Studio/img/logo.png" class="h-7" alt="Flowbite Logo">
-        <span class="self-center text-xl text-heading font-semibold whitespace-nowrap">LM Studio</span>
-    </a>
-    <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-        <button type="button" class="text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">Get started</button>
-        <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary" aria-controls="navbar-sticky" aria-expanded="false">
-            <span class="sr-only">Open main menu</span>
-            <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
-        </button>
+  <!-- Navegación -->
+  <nav class="bg-neutral-primary fixed w-full z-20 top-0 start-0 border-b border-default">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="#inicio" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="../Portafolio LM - Studio/img/logo.png" class="h-7" alt="LM Studio Logo">
+          <span class="self-center text-xl text-heading font-semibold whitespace-nowrap">LM Studio</span>
+      </a>
+      <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+          <a href="#contacto" class="text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">Get started</a>
+          <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary" aria-controls="navbar-sticky" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
+          </button>
+      </div>
+      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+        <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-default rounded-base bg-neutral-secondary-soft md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-neutral-primary">
+          <li><a href="#inicio" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:hover:text-fg-brand md:p-0">Inicio</a></li>
+          <li><a href="#inicio" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:hover:text-fg-brand md:p-0">¿Quién soy?</a></li>
+          <li><a href="#servicios" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:hover:text-fg-brand md:p-0">Servicios</a></li>
+          <li><a href="#proyectos" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:hover:text-fg-brand md:p-0">Proyectos</a></li>
+          <li><a href="#opiniones" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:hover:text-fg-brand md:p-0">Opiniones</a></li>
+          <li><a href="#contacto" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:hover:text-fg-brand md:p-0">Contacto</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-      <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-default rounded-base bg-neutral-secondary-soft md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-neutral-primary">
-        <li>
-          <a href="#" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Inicio</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Quien soy?</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Servicios</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Proyectos</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Opiniones</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Contacto</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+  </nav>
 
-<!-- Contenido principal -->
-<!-- Quien soy? -->
+  <!-- Contenido principal -->
   <main class="pt-16">
-    <section class="bg-center bg-no-repeat bg-cover bg-gray-700 bg-blend-multiply" style="background-image: url('/img/HTML.jpg');">
+    
+    <!-- Inicio / Quién soy -->
+    <section id="inicio" class="bg-center bg-no-repeat bg-cover bg-gray-700 bg-blend-multiply" style="background-image: url('/img/HTML.jpg');">
         <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
             <h1 class="mb-6 text-4xl font-bold tracking-tighter text-white md:text-5xl lg:text-6xl">LM STUDIO</h1>
             <p class="mb-8 text-base font-normal text-white md:text-xl sm:px-18 lg:px-55">LM Studio nace como mi proyecto personal para llevar ideas al mundo digital. Aunque estoy dando mis primeros pasos como profesional independiente, cuento con formación actualizada en las tecnologías más recientes de la industria. Trabajo con compromiso total en cada proyecto, garantizando un desarrollo limpio, funcional y entregado con la máxima dedicación.</p>
         </div>
     </section>
-<!-- Nuestros Servicios -->
-    <section class="max-w-screen-xl mx-auto p-4">
-      <h2 class="text-2xl font-bold my-4">Nuestros Servicios / ¿Cómo puedo ayudarte?</h2>
-      <p class="mb-4">En LM Studio, nos especializamos en ofrecer soluciones digitales personalizadas para satisfacer las necesidades de nuestros clientes. Mi trabajo es transformar tus ideas y necesidades en sitios web funcionales, atractivos y optimizados para que tus potenciales clientes tengan la mejor experiencia posible. A continuación, te presentamos algunos de los servicios que ofrecemos:</p>
+
+    <!-- Nuestros Servicios -->
+    <section id="servicios" class="max-w-screen-xl mx-auto p-4 my-8">
+      <h2 class="text-3xl font-extrabold my-4 text-heading">Nuestros Servicios / ¿Cómo puedo ayudarte?</h2>
+      <p class="mb-6 text-body">En LM Studio, nos especializamos en ofrecer soluciones digitales personalizadas para satisfacer las necesidades de nuestros clientes. Mi trabajo es transformar tus ideas y necesidades en sitios web funcionales, atractivos y optimizados para que tus potenciales clientes tengan la mejor experiencia posible.</p>
       
-      <h3 class="font-bold mt-4">Landing page:</h3>
-      <p class="mb-4">Si tu objetivo es lanzar una campaña publicitaria, promocionar un producto estrella o captar clientes de forma rápida, este servicio es el indicado. Diseño páginas únicas, ágiles y enfocadas 100% en captar la atención del visitante y guiarlo a realizar una acción concreta, como enviar un mensaje de WhatsApp, pedir un presupuesto o concretar una compra.
-    </p>
-      <ul>
-        <li>Ideal para: Lanzamientos, ofertas especiales, campañas publicitarias y profesionales independientes.</li>
-        <li>Qué incluye: Diseño de alta velocidad, adaptado a celulares, estructura persuasiva y botones de contacto directo.</li>
-      </ul>
-      <h3 class="font-bold mt-4">Sitios Web Institucionales:</h3>
-      <p class="mb-4">La carta de presentación digital que tu negocio necesita. Diseñado para marcas o negocios que necesitan transmitir solidez, confianza y profesionalismo. A través de un sitio multi-sección (Inicio, Sobre Nosotros, Servicios, Galería y Contacto), tus clientes podrán conocer a fondo quién sos, qué hacés y por qué deberían elegirte a vos sobre la competencia.</p>
-      <ul>
-        <li>Ideal para: PYMES, comercios, empresas consolidadas o profesionales que prestan múltiples servicios.</li>
-        <li></li>Qué incluye: Arquitectura multi-página, diseño personalizado adaptado a tu identidad visual, mapas interactivos, formularios y optimización para buscadores.</li>
-      </ul>
-
-      <!-- Proyectos -->
-      <h2 class="text-2xl font-bold my-4">Proyectos</h2>
-      <p class="mb-4">Desarrollo soluciones web funcionales que abarcan desde plataformas comerciales a medida hasta interfaces creativas enfocadas en la experiencia de usuario. A continuación, presento una selección de proyectos reales y desarrollos destacados donde aplico buenas prácticas de maquetación, diseño adaptativo e integración tecnológica.</p>
-      
-<div class="bg-neutral-primary-soft block max-w-2xl mx-auto border border-default rounded-base shadow-xs overflow-hidden my-6">
-    <a href="#">
-        <img class="w-full h-auto object-cover" src="../Portafolio LM - Studio/img/Fansite_twice.png" alt="Fansite Twice" />
-    </a>
-    <div class="p-6 text-center">
-        <span class="inline-flex items-center bg-brand-softer border border-brand-subtle text-fg-brand-strong text-xs font-medium px-2 py-1 rounded-sm mb-3">
-            <svg class="w-3.5 h-3.5 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.122 17.645a7.185 7.185 0 0 1-2.656 2.495 7.06 7.06 0 0 1-3.52.853 6.617 6.617 0 0 1-3.306-.718 6.73 6.73 0 0 1-2.54-2.266c-2.672-4.57.287-8.846.887-9.668A4.448 4.448 0 0 0 8.07 6.31 4.49 4.49 0 0 0 7.997 4c1.284.965 6.43 3.258 5.525 10.631 1.496-1.136 2.7-3.046 2.846-6.216 1.43 1.061"/>
-            </svg>
-            Proyecto Destacado
-        </span>
-
-        <h3 class="text-2xl font-bold mb-3 text-heading">Proyecto 1: Fansite Dedicado a Twice</h3>
-        
-        <p class="mb-4 text-body text-sm leading-relaxed">
-            Este proyecto es un fansite dedicado al grupo de K-pop Twice, creado con el objetivo de ofrecer a los fanáticos un espacio interactivo y visualmente atractivo para explorar contenido relacionado con la banda. El sitio incluye secciones de noticias, biografía, discografía, galerías de fotos y videos, así como un foro para que los fans puedan compartir sus experiencias y opiniones.
-        </p>
-        
-        <p class="mb-6 text-body text-xs text-neutral-tertiary leading-relaxed">
-            <strong>Puntos clave:</strong> Estructuración HTML semántica, diseño receptivo (responsive) mediante CSS/SASS, arquitectura visual orientada a la experiencia de usuario y despliegue del proyecto.
-        </p>
-
-        <p class="mb-6 text-body text-xs text-neutral-tertiary leading-relaxed">
-            <strong> Tecnologías utilizadas:</strong> 
-            <img src="../Portafolio LM - Studio/img/html5.svg" alt="HTML5" class="w-4 h-4 inline-block me-1">
-            <img src="../Portafolio LM - Studio/img/css3.svg" alt="CSS3" class="w-4 h-4 inline-block me-1">
-            <img src="../Portafolio LM - Studio/img/sass.svg" alt="SASS" class="w-4 h-4 inline-block me-1">
-            <img src="../Portafolio LM - Studio/img/bootstrap.svg" alt="JavaScript" class="w-4 h-4 inline-block me-1">
-        </p>
-
-        <a href="#" class="inline-flex items-center text-black bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
-            Ver más
-            <svg class="w-4 h-4 ms-1.5 rtl:rotate-180 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
-            </svg>
-        </a>
-    </div>
-</div>
-
-<div class="bg-neutral-primary-soft block max-w-2xl mx-auto border border-default rounded-base shadow-xs overflow-hidden my-6">
-    <a href="#">
-        <img class="w-full h-auto object-cover" src="../Portafolio LM - Studio/img/Ulicel.png" alt="Ulicel" />
-    </a>
-    <div class="p-6 text-center">
-        <span class="inline-flex items-center bg-brand-softer border border-brand-subtle text-fg-brand-strong text-xs font-medium px-2 py-1 rounded-sm mb-3">
-            <svg class="w-3.5 h-3.5 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.122 17.645a7.185 7.185 0 0 1-2.656 2.495 7.06 7.06 0 0 1-3.52.853 6.617 6.617 0 0 1-3.306-.718 6.73 6.73 0 0 1-2.54-2.266c-2.672-4.57.287-8.846.887-9.668A4.448 4.448 0 0 0 8.07 6.31 4.49 4.49 0 0 0 7.997 4c1.284.965 6.43 3.258 5.525 10.631 1.496-1.136 2.7-3.046 2.846-6.216 1.43 1.061"/>
-            </svg>
-            Proyecto Destacado
-        </span>
-
-        <h3 class="text-2xl font-bold mb-3 text-heading">Proyecto 2:Sitio Web para Servicio Técnico Ulicel</h3>
-        
-        <p class="mb-4 text-body text-sm leading-relaxed">
-            Este proyecto es un sitio web para un servicio técnico de Ulicel, creado con el objetivo de ofrecer a los clientes un espacio interactivo y visualmente atractivo para explorar contenido relacionado con el servicio. El sitio incluye secciones de noticias, biografía, discografía, galerías de fotos y videos, así como un foro para que los clientes puedan compartir sus experiencias y opiniones.
-        </p>
-        
-        <p class="mb-6 text-body text-xs text-neutral-tertiary leading-relaxed">
-            <strong>Puntos clave:</strong> Maquetación modular con soporte multidispositivo (laptop, tablet, móvil), optimización de recursos gráficos SVG e imágenes corporativas, integración de formulario de contacto/atención y control de versiones mediante Git.
-        </p>
-
-        <p class="mb-6 text-body text-xs text-neutral-tertiary leading-relaxed">
-            <strong> Tecnologías utilizadas:</strong> 
-            <img src="../Portafolio LM - Studio/img/html5.svg" alt="HTML5" class="w-4 h-4 inline-block me-1">
-            <img src="../Portafolio LM - Studio/img/css3.svg" alt="CSS3" class="w-4 h-4 inline-block me-1">
-            <img src="../Portafolio LM - Studio/img/js.svg" alt="JavaScript" class="w-4 h-4 inline-block me-1">
-            <img src="../Portafolio LM - Studio/img/tailwind.svg" alt="Tailwind CSS" class="w-4 h-4 inline-block me-1">
-        
-        <a href="https://ulicel.netlify.app/" class="inline-flex items-center text-black bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
-            Ver más
-            <svg class="w-4 h-4 ms-1.5 rtl:rotate-180 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
-            </svg>
-        </a>
-    </div>
-</div>
-  </section>
-  <!-- Opiniones -->
-  
-  <section id="opiniones" class="py-12 bg-neutral-primary-soft">
-  <div class="max-w-screen-xl px-4 mx-auto text-center">
-    <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-heading md:text-4xl">
-      Lo que dicen mis clientes
-    </h2>
-    <p class="mb-8 text-body text-base max-w-2xl mx-auto">
-      La satisfacción y la confianza en cada entrega son mi prioridad. Esto es lo que opinan sobre trabajar conmigo:
-    </p>
-
-    <!-- Grid de tarjetas de testimonios -->
-    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-      
-      <!-- Tarjeta 1 -->
-      <div class="p-6 bg-neutral-primary border border-default rounded-base shadow-xs flex flex-col justify-between">
-        <div>
-          <!-- Estrellas -->
-          <div class="flex justify-center mb-4 text-yellow-400 space-x-1">
-            ★★★★★
-          </div>
-          <p class="mb-4 text-body text-sm italic">
-            "Excelente trabajo maquetando nuestra página. Se entregó a tiempo, con un diseño impecable y totalmente responsivo."
-          </p>
+      <div class="space-y-6">
+        <div class="p-6 bg-neutral-primary border border-default rounded-base shadow-xs">
+          <h3 class="text-xl font-bold mb-2 text-heading">Landing page:</h3>
+          <p class="mb-4 text-body">Si tu objetivo es lanzar una campaña publicitaria, promocionar un producto estrella o captar clientes de forma rápida, este servicio es el indicado. Diseño páginas únicas, ágiles y enfocadas 100% en captar la atención del visitante y guiarlo a realizar una acción concreta.</p>
+          <ul class="list-disc list-inside text-sm text-neutral-tertiary space-y-1">
+            <li><strong>Ideal para:</strong> Lanzamientos, ofertas especiales, campañas publicitarias y profesionales independientes.</li>
+            <li><strong>Qué incluye:</strong> Diseño de alta velocidad, adaptado a celulares, estructura persuasiva y botones de contacto directo.</li>
+          </ul>
         </div>
-        <div class="flex items-center justify-center space-x-3 mt-4">
-          <div class="font-medium text-heading text-sm">
-            Carlos Gutiérrez
-            <span class="block text-xs text-neutral-tertiary">Fundador de MiEmpresa</span>
+
+        <div class="p-6 bg-neutral-primary border border-default rounded-base shadow-xs">
+          <h3 class="text-xl font-bold mb-2 text-heading">Sitios Web Institucionales:</h3>
+          <p class="mb-4 text-body">La carta de presentación digital que tu negocio necesita. Diseñado para marcas o negocios que necesitan transmitir solidez, confianza y profesionalismo a través de un sitio multi-sección.</p>
+          <ul class="list-disc list-inside text-sm text-neutral-tertiary space-y-1">
+            <li><strong>Ideal para:</strong> PYMES, comercios, empresas consolidadas o profesionales que prestan múltiples servicios.</li>
+            <li><strong>Qué incluye:</strong> Arquitectura multi-página, diseño personalizado adaptado a tu identidad visual, mapas interactivos, formularios y optimización para buscadores.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos" class="max-w-screen-xl mx-auto p-4 my-8">
+      <h2 class="text-3xl font-extrabold my-4 text-heading">Proyectos</h2>
+      <p class="mb-6 text-body">Desarrollo soluciones web funcionales que abarcan desde plataformas comerciales a medida hasta interfaces creativas enfocadas en la experiencia de usuario.</p>
+      
+      <!-- Proyecto 1 -->
+      <div class="bg-neutral-primary block max-w-2xl mx-auto border border-default rounded-base shadow-xs overflow-hidden my-6">
+          <a href="#">
+              <img class="w-full h-auto object-cover" src="../Portafolio LM - Studio/img/Fansite_twice.png" alt="Fansite Twice" />
+          </a>
+          <div class="p-6 text-center">
+              <span class="inline-flex items-center bg-brand-softer border border-brand-subtle text-fg-brand-strong text-xs font-medium px-2 py-1 rounded-sm mb-3">
+                  Proyecto Destacado
+              </span>
+              <h3 class="text-2xl font-bold mb-3 text-heading">Proyecto 1: Fansite Dedicado a Twice</h3>
+              <p class="mb-4 text-body text-sm leading-relaxed">
+                  Este proyecto es un fansite dedicado al grupo de K-pop Twice, creado con el objetivo de ofrecer a los fanáticos un espacio interactivo y visualmente atractivo para explorar contenido relacionado con la banda.
+              </p>
+              <p class="mb-3 text-body text-xs text-neutral-tertiary leading-relaxed">
+                  <strong>Puntos clave:</strong> Estructuración HTML semántica, diseño responsive (CSS/SASS), arquitectura visual orientada a UX y despliegue web.
+              </p>
+              <div class="mb-6 text-body text-xs text-neutral-tertiary flex items-center justify-center space-x-2">
+                  <strong>Tecnologías utilizadas:</strong> 
+                  <img src="../Portafolio LM - Studio/img/html5.svg" alt="HTML5" class="w-4 h-4">
+                  <img src="../Portafolio LM - Studio/img/css3.svg" alt="CSS3" class="w-4 h-4">
+                  <img src="../Portafolio LM - Studio/img/sass.svg" alt="SASS" class="w-4 h-4">
+                  <img src="../Portafolio LM - Studio/img/bootstrap.svg" alt="Bootstrap" class="w-4 h-4">
+              </div>
+              <a href="#" class="inline-flex items-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
+                  Ver más
+                  <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/></svg>
+              </a>
+          </div>
+      </div>
+
+      <!-- Proyecto 2 -->
+      <div class="bg-neutral-primary block max-w-2xl mx-auto border border-default rounded-base shadow-xs overflow-hidden my-6">
+          <a href="https://ulicel.netlify.app/" target="_blank">
+              <img class="w-full h-auto object-cover" src="../Portafolio LM - Studio/img/Ulicel.png" alt="Ulicel" />
+          </a>
+          <div class="p-6 text-center">
+              <span class="inline-flex items-center bg-brand-softer border border-brand-subtle text-fg-brand-strong text-xs font-medium px-2 py-1 rounded-sm mb-3">
+                  Proyecto Destacado
+              </span>
+              <h3 class="text-2xl font-bold mb-3 text-heading">Proyecto 2: Sitio Web para Servicio Técnico Ulicel</h3>
+              <p class="mb-4 text-body text-sm leading-relaxed">
+                  Sitio web desarrollado para la gestión y presentación de servicios de reparación técnica, optimizado para consulta rápida de clientes y recepción de solicitudes.
+              </p>
+              <p class="mb-3 text-body text-xs text-neutral-tertiary leading-relaxed">
+                  <strong>Puntos clave:</strong> Maquetación modular multidispositivo, optimización gráfica SVG, formularios de atención integrados y control de versiones con Git.
+              </p>
+              <div class="mb-6 text-body text-xs text-neutral-tertiary flex items-center justify-center space-x-2">
+                  <strong>Tecnologías utilizadas:</strong> 
+                  <img src="../Portafolio LM - Studio/img/html5.svg" alt="HTML5" class="w-4 h-4">
+                  <img src="../Portafolio LM - Studio/img/css3.svg" alt="CSS3" class="w-4 h-4">
+                  <img src="../Portafolio LM - Studio/img/js.svg" alt="JavaScript" class="w-4 h-4">
+                  <img src="../Portafolio LM - Studio/img/tailwind.svg" alt="Tailwind CSS" class="w-4 h-4">
+              </div>
+              <a href="https://ulicel.netlify.app/" target="_blank" class="inline-flex items-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
+                  Ver demo en vivo
+                  <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/></svg>
+              </a>
+          </div>
+      </div>
+    </section>
+
+    <!-- Opiniones -->
+    <section id="opiniones" class="py-12 bg-neutral-primary border-y border-default">
+      <div class="max-w-screen-xl px-4 mx-auto text-center">
+        <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-heading md:text-4xl">
+          Lo que dicen mis clientes
+        </h2>
+        <p class="mb-8 text-body text-base max-w-2xl mx-auto">
+          La satisfacción y la confianza en cada entrega son mi prioridad. Esto es lo que opinan sobre trabajar conmigo:
+        </p>
+
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div class="p-6 bg-neutral-secondary-soft border border-default rounded-base shadow-xs flex flex-col justify-between">
+            <div>
+              <div class="flex justify-center mb-4 text-yellow-400 space-x-1">★★★★★</div>
+              <p class="mb-4 text-body text-sm italic">"Excelente trabajo maquetando nuestra página. Se entregó a tiempo, con un diseño impecable y totalmente responsivo."</p>
+            </div>
+            <div class="font-medium text-heading text-sm mt-4">
+              Carlos Gutiérrez
+              <span class="block text-xs text-neutral-tertiary">Fundador de MiEmpresa</span>
+            </div>
+          </div>
+
+          <div class="p-6 bg-neutral-secondary-soft border border-default rounded-base shadow-xs flex flex-col justify-between">
+            <div>
+              <div class="flex justify-center mb-4 text-yellow-400 space-x-1">★★★★★</div>
+              <p class="mb-4 text-body text-sm italic">"Muy profesional en la comunicación y entendió rápido lo que necesitábamos para la landing page. Altamente recomendado."</p>
+            </div>
+            <div class="font-medium text-heading text-sm mt-4">
+              María Fernández
+              <span class="block text-xs text-neutral-tertiary">Diseñadora UX/UI</span>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Tarjeta 2 -->
-      <div class="p-6 bg-neutral-primary border border-default rounded-base shadow-xs flex flex-col justify-between">
+    <!-- Contacto -->
+    <section id="contacto" class="max-w-screen-md mx-auto p-4 my-12">
+      <h2 class="text-3xl font-extrabold text-center mb-6 text-heading">Contacto</h2>
+      
+      <form action="#" method="POST" class="bg-neutral-primary p-6 border border-default rounded-base shadow-xs space-y-4 mb-6">
         <div>
-          <div class="flex justify-center mb-4 text-yellow-400 space-x-1">
-            ★★★★★
-          </div>
-          <p class="mb-4 text-body text-sm italic">
-            "Muy profesional en la comunicación y entendió rápido lo que necesitábamos para la landing page. Altamente recomendado."
-          </p>
+          <label for="name" class="block mb-2 text-sm font-medium text-heading">Nombre</label>
+          <input type="text" id="name" name="name" class="bg-neutral-secondary-soft border border-default text-heading text-sm rounded-base block w-full p-2.5 focus:ring-brand focus:border-brand" required>
         </div>
-        <div class="flex items-center justify-center space-x-3 mt-4">
-          <div class="font-medium text-heading text-sm">
-            María Fernández
-            <span class="block text-xs text-neutral-tertiary">Diseñadora UX/UI</span>
-          </div>
+        <div>
+          <label for="numero" class="block mb-2 text-sm font-medium text-heading">Número de teléfono</label>
+          <input type="tel" id="numero" name="numero" class="bg-neutral-secondary-soft border border-default text-heading text-sm rounded-base block w-full p-2.5 focus:ring-brand focus:border-brand" required>
         </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Contacto -->
-
-<form action="" method="POST" class="formulario-contacto">
-        <div class="form-group">
-          <label for="name">Nombre</label>
-          <input type="text" id="name" name="name" required>
+        <div>
+          <label for="email" class="block mb-2 text-sm font-medium text-heading">Correo electrónico</label>
+          <input type="email" id="email" name="email" class="bg-neutral-secondary-soft border border-default text-heading text-sm rounded-base block w-full p-2.5 focus:ring-brand focus:border-brand">
         </div>
-        <div class="form-group">
-          <label for="numero">Número de teléfono</label>
-          <input type="tel" id="numero" name="numero" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Correo electrónico</label>
-          <input type="email" id="email" name="email">
-        </div>
-        <div class="form-group">
-          <label for="tipo de servicios">Tipo de servicios</label>
-          <select id="tipo de servicios" name="tipo de servicios" required>
-            <option value="">Seleccionar</option>
-            <option value="servicio1">lading page</option>
-            <option value="servicio2">Página institucional</option>
+        <div>
+          <label for="servicio" class="block mb-2 text-sm font-medium text-heading">Tipo de servicio</label>
+          <select id="servicio" name="servicio" class="bg-neutral-secondary-soft border border-default text-heading text-sm rounded-base block w-full p-2.5 focus:ring-brand focus:border-brand" required>
+            <option value="">Seleccionar un servicio</option>
+            <option value="landing">Landing Page</option>
+            <option value="institucional">Página Institucional</option>
           </select>
         </div>
-        <button type="submit" class="btn">Enviar mensaje</button>
+        <button type="submit" class="w-full text-white bg-brand hover:bg-brand-strong font-medium rounded-base text-sm px-5 py-3 text-center">Enviar mensaje</button>
       </form>
-    <a href="https://wa.me/5493878123456" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-green-600 hover:text-green-700 font-medium">
-    <img src="../Portafolio LM - Studio/img/whatsapp.svg" alt="WhatsApp" class="w-5 h-5 me-2">
-    Escribir por WhatsApp
-    </a>
-    <a href="mailto:tu-email@dominio.com" class="inline-flex items-center text-body hover:text-fg-brand font-medium">
-    <img src="../Portafolio LM - Studio/img/gmail.svg" alt="Email" class="w-5 h-5 me-2">
-    Escribir por mail
-    </a>
 
-<!-- footer -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+        <a href="https://wa.me/5493878123456" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-green-600 hover:text-green-700 font-medium">
+          <img src="../Portafolio LM - Studio/img/whatsapp.svg" alt="WhatsApp" class="w-5 h-5 me-2">
+          Escribir por WhatsApp
+        </a>
+        <a href="mailto:tu-email@dominio.com" class="inline-flex items-center text-body hover:text-fg-brand font-medium">
+          <img src="../Portafolio LM - Studio/img/gmail.svg" alt="Email" class="w-5 h-5 me-2">
+          Escribir por Mail
+        </a>
+      </div>
+    </section>
 
-<footer class="bg-neutral-primary-soft rounded-base shadow-xs border border-default m-4">
-    <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-      <span class="text-sm text-body sm:text-center">© 2026 <a href="#" class="hover:underline">LM Studio</a>. todos los derechos reservados.</span>
-<ul class="flex flex-wrap items-center text-sm font-medium text-body sm:mt-0">
-  <li>
-    <a href="#inicio" class="hover:underline me-4 md:me-6">Inicio</a>
-  </li>
-  <li>
-    <a href="#servicios" class="hover:underline me-4 md:me-6">Servicios</a>
-  </li>
-  <li>
-    <a href="#proyectos" class="hover:underline me-4 md:me-6">Proyectos</a>
-  </li>
-  <li>
-    <a href="#contacto" class="hover:underline">Contacto</a>
-  </li>
-</ul>
-    </div>
-</footer>
-</main>
+    <!-- Footer -->
+    <footer class="bg-neutral-primary rounded-base shadow-xs border border-default m-4">
+        <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+          <span class="text-sm text-body sm:text-center">© 2026 <a href="#inicio" class="hover:underline">LM Studio</a>. Todos los derechos reservados.</span>
+          <ul class="flex flex-wrap items-center text-sm font-medium text-body mt-3 sm:mt-0">
+            <li><a href="#inicio" class="hover:underline me-4 md:me-6">Inicio</a></li>
+            <li><a href="#servicios" class="hover:underline me-4 md:me-6">Servicios</a></li>
+            <li><a href="#proyectos" class="hover:underline me-4 md:me-6">Proyectos</a></li>
+            <li><a href="#contacto" class="hover:underline">Contacto</a></li>
+          </ul>
+        </div>
+    </footer>
+  </main>
 
-<script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
 </body>
 </html>
