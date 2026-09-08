@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet"/>
   <link href="../Portafolio LM - Studio/style.css" rel="stylesheet"/>
+  <link rel="icon" type="image/x-icon" href="../Portafolio LM - Studio/img/logo.png">
   <title>Portafolio - LM Studio</title>
 </head>
 <body>
@@ -13,7 +14,7 @@
 <nav class="bg-neutral-primary fixed w-full z-20 top-0 start-0 border-b border-default">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <img src="https://flowbite.com/docs/images/logo.svg" class="h-7" alt="Flowbite Logo">
+        <img src="../Portafolio LM - Studio/img/logo.png" class="h-7" alt="Flowbite Logo">
         <span class="self-center text-xl text-heading font-semibold whitespace-nowrap">LM Studio</span>
     </a>
     <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
@@ -151,24 +152,58 @@
   </section>
   <!-- Opiniones -->
   
-  <section class="opiniones" id="opiniones">
-  <div>
-    <h1 class="titulo-opiniones">Opiniones de nuestros clientes</h1>
-    <p class="descripcion-opiniones">Nuestros clientes están satisfechos con nuestro servicio. Aquí hay algunas opiniones de ellos:</p>
-    <div class="carrusel-wrapper">
-      <div class="card-container">
-          <!-- Tanda 1 -->
-        <div class="card-op">
-          <div class="stars">★★★★★</div>
-          <p class="comment">"Buena atención, ambiente climatizado y cómodo. Televisor en sala de espera. Seriedad y compromiso"</p>
-          <div class="user-info">
-            <div class="avatar">M</div>
-            <div>
-              <p class="name">Mari Mari</p>
-              <p class="status">Cliente verificada</p>
-            </div>
+  <section id="opiniones" class="py-12 bg-neutral-primary-soft">
+  <div class="max-w-screen-xl px-4 mx-auto text-center">
+    <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-heading md:text-4xl">
+      Lo que dicen mis clientes
+    </h2>
+    <p class="mb-8 text-body text-base max-w-2xl mx-auto">
+      La satisfacción y la confianza en cada entrega son mi prioridad. Esto es lo que opinan sobre trabajar conmigo:
+    </p>
+
+    <!-- Grid de tarjetas de testimonios -->
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      
+      <!-- Tarjeta 1 -->
+      <div class="p-6 bg-neutral-primary border border-default rounded-base shadow-xs flex flex-col justify-between">
+        <div>
+          <!-- Estrellas -->
+          <div class="flex justify-center mb-4 text-yellow-400 space-x-1">
+            ★★★★★
+          </div>
+          <p class="mb-4 text-body text-sm italic">
+            "Excelente trabajo maquetando nuestra página. Se entregó a tiempo, con un diseño impecable y totalmente responsivo."
+          </p>
+        </div>
+        <div class="flex items-center justify-center space-x-3 mt-4">
+          <div class="font-medium text-heading text-sm">
+            Carlos Gutiérrez
+            <span class="block text-xs text-neutral-tertiary">Fundador de MiEmpresa</span>
           </div>
         </div>
+      </div>
+
+      <!-- Tarjeta 2 -->
+      <div class="p-6 bg-neutral-primary border border-default rounded-base shadow-xs flex flex-col justify-between">
+        <div>
+          <div class="flex justify-center mb-4 text-yellow-400 space-x-1">
+            ★★★★★
+          </div>
+          <p class="mb-4 text-body text-sm italic">
+            "Muy profesional en la comunicación y entendió rápido lo que necesitábamos para la landing page. Altamente recomendado."
+          </p>
+        </div>
+        <div class="flex items-center justify-center space-x-3 mt-4">
+          <div class="font-medium text-heading text-sm">
+            María Fernández
+            <span class="block text-xs text-neutral-tertiary">Diseñadora UX/UI</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 <!-- Contacto -->
 
