@@ -1,0 +1,23 @@
+/* Desplazamiento suave al navegar por anclas (#inicio, #servicios, etc.) */
+html {
+  scroll-behavior: smooth;
+  /* Compensa la altura del menú fijo al hacer scroll hacia una sección */
+  scroll-padding-top: 5rem; 
+}
+
+/* Mantiene el aspecto de las imágenes en las tarjetas de proyectos sin distorsionarlas */
+.card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* Transición suave al pasar el mouse sobre las tarjetas */
+.project-card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
