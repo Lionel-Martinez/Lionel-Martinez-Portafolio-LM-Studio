@@ -50,12 +50,20 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-window.addEventListener('load', () => {
+// Ocultar pantalla de carga (Loader Rubik)
+function hideLoader() {
   const loader = document.getElementById('loader-wrapper');
-  if (loader) {
+  if (loader && !loader.classList.contains('opacity-0')) {
     loader.classList.add('opacity-0', 'pointer-events-none');
     setTimeout(() => {
       loader.style.display = 'none';
     }, 500);
   }
-});
+}
+
+// Se ejecuta al cargar el DOM o las imágenes
+document.addEventListener('DOMContentLoaded', hideLoader);
+window.addEventListener('load', hideLoader);
+
+// Respaldo de seguridad: Forzar ocultado tras 1.5 segundos por si falla alguna ruta
+setTimeout(hideLoader, 1500);

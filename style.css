@@ -30,11 +30,19 @@ h2{
 }
 
 /* ESTILOS PRELOADER CUBO RUBIK 3D */
+
+#loader-wrapper {
+  overflow: hidden;
+}
+
 #loader-wrapper .container {
   position: relative;
   height: 100px;
   width: 86px;
   transform: scale(0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #loader-wrapper .cube {
