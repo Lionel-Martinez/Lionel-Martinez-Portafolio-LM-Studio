@@ -49,3 +49,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+window.addEventListener('load', () => {
+  const loader = document.getElementById('loader-wrapper');
+  if (loader) {
+    loader.classList.add('opacity-0', 'pointer-events-none');
+    setTimeout(() => {
+      loader.style.display = 'none';
+    }, 500);
+  }
+});
