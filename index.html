@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <!-- SEO -->
   <title>LM Studio | Desarrollo Web Freelance & Diseños Personalizados</title>
   <meta name="description" content="Desarrollo páginas web institucionales, landing pages de alta conversión y soluciones digitales a medida. Maquetación limpia, rápida y adaptable a celulares.">
@@ -17,39 +18,61 @@
   <meta property="og:description" content="Transformo tus ideas en sitios web funcionales, atractivos y optimizados para potenciar tu negocio.">
   <meta property="og:image" content="../Portafolio LM - Studio/img/logo.png">
 
+  <!-- Favicon y Estilos -->
   <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet"/>
   <link href="../Portafolio LM - Studio/style.css" rel="stylesheet"/>
   <link rel="icon" type="image/x-icon" href="../Portafolio LM - Studio/img/logo.png">
-  <title>Portafolio - LM Studio</title>
+  
+  <!-- CDN Tailwind + Configuración Dark Mode por clase -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
 </head>
-<body class="bg-neutral-primary-soft">
+<body class="bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-gray-100 transition-colors duration-200">
 
-  <!-- Navegación -->
-  <nav class="bg-neutral-primary fixed w-full z-20 top-0 start-0 border-b border-default">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-      <a href="#inicio" class="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="../Portafolio LM - Studio/img/logo.png" class="h-7" alt="LM Studio Logo">
-          <span class="self-center text-xl text-heading font-semibold whitespace-nowrap">LM Studio</span>
-      </a>
-      <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-          <a href="#contacto" class="text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">Get started</a>
-          <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary" aria-controls="navbar-sticky" aria-expanded="false">
-              <span class="sr-only">Open main menu</span>
-              <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
-          </button>
-      </div>
-      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-        <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-default rounded-base bg-neutral-secondary-soft md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-neutral-primary">
-          <li><a href="#inicio" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:hover:text-fg-brand md:p-0">Inicio</a></li>
-          <li><a href="#inicio" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:hover:text-fg-brand md:p-0">¿Quién soy?</a></li>
-          <li><a href="#servicios" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:hover:text-fg-brand md:p-0">Servicios</a></li>
-          <li><a href="#proyectos" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:hover:text-fg-brand md:p-0">Proyectos</a></li>
-          <li><a href="#opiniones" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:hover:text-fg-brand md:p-0">Opiniones</a></li>
-          <li><a href="#contacto" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:hover:text-fg-brand md:p-0">Contacto</a></li>
-        </ul>
-      </div>
+<!-- Navegación -->
+<nav class="fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md transition-colors">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    
+    <!-- Logo -->
+    <a href="#inicio" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="../Portafolio LM - Studio/img/logo.png" class="h-7" alt="LM Studio Logo">
+        <span class="self-center text-xl text-gray-900 dark:text-white font-semibold whitespace-nowrap">LM Studio</span>
+    </a>
+
+    <!-- Botones Derecha -->
+    <div class="flex md:order-2 space-x-2 rtl:space-x-reverse items-center">
+        <!-- BOTÓN MODO OSCURO -->
+        <button id="theme-toggle" type="button" class="flex items-center gap-2 text-gray-700 dark:text-white bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 border border-gray-300 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-500 font-medium rounded-lg text-xs px-3 py-2 cursor-pointer transition-colors">
+            <span id="theme-toggle-text">Modo Oscuro</span>
+            <svg id="theme-toggle-dark-icon" class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+            <svg id="theme-toggle-light-icon" class="hidden w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+        </button>
+
+        <!-- Botón Menú Móvil -->
+        <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 dark:text-gray-400 rounded-lg md:hidden hover:bg-gray-100 dark:hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-700" aria-controls="navbar-sticky" aria-expanded="false">
+            <span class="sr-only">Abrir menú</span>
+            <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
+        </button>
     </div>
-  </nav>
+
+    <!-- Enlaces -->
+    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+      <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-200 dark:border-slate-800 rounded-lg bg-gray-50 dark:bg-slate-800 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:md:bg-transparent">
+        <li><a href="#inicio" class="block py-2 px-3 text-gray-900 dark:text-white rounded hover:text-blue-600 dark:hover:text-blue-400 md:p-0">Inicio</a></li>
+        <li><a href="#inicio" class="block py-2 px-3 text-gray-900 dark:text-white rounded hover:text-blue-600 dark:hover:text-blue-400 md:p-0">¿Quién soy?</a></li>
+        <li><a href="#servicios" class="block py-2 px-3 text-gray-900 dark:text-white rounded hover:text-blue-600 dark:hover:text-blue-400 md:p-0">Servicios</a></li>
+        <li><a href="#proyectos" class="block py-2 px-3 text-gray-900 dark:text-white rounded hover:text-blue-600 dark:hover:text-blue-400 md:p-0">Proyectos</a></li>
+        <li><a href="#opiniones" class="block py-2 px-3 text-gray-900 dark:text-white rounded hover:text-blue-600 dark:hover:text-blue-400 md:p-0">Opiniones</a></li>
+        <li><a href="#contacto" class="block py-2 px-3 text-gray-900 dark:text-white rounded hover:text-blue-600 dark:hover:text-blue-400 md:p-0">Contacto</a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
 
   <!-- Contenido principal -->
   <main class="pt-16">
@@ -64,23 +87,23 @@
 
     <!-- Nuestros Servicios -->
     <section id="servicios" class="max-w-screen-xl mx-auto p-4 my-8">
-      <h2 class="text-3xl font-extrabold my-4 text-heading">Nuestros Servicios / ¿Cómo puedo ayudarte?</h2>
-      <p class="mb-6 text-body">En LM Studio, nos especializamos en ofrecer soluciones digitales personalizadas para satisfacer las necesidades de nuestros clientes. Mi trabajo es transformar tus ideas y necesidades en sitios web funcionales, atractivos y optimizados para que tus potenciales clientes tengan la mejor experiencia posible.</p>
+      <h2 class="text-3xl font-extrabold my-4 text-gray-900 dark:text-white">Nuestros Servicios / ¿Cómo puedo ayudarte?</h2>
+      <p class="mb-6 text-gray-600 dark:text-gray-300">En LM Studio, nos especializamos en ofrecer soluciones digitales personalizadas para satisfacer las necesidades de nuestros clientes. Mi trabajo es transformar tus ideas y necesidades en sitios web funcionales, atractivos y optimizados para que tus potenciales clientes tengan la mejor experiencia posible.</p>
       
       <div class="space-y-6">
-        <div class="p-6 bg-neutral-primary border border-default rounded-base shadow-xs">
-          <h3 class="text-xl font-bold mb-2 text-heading">Landing page:</h3>
-          <p class="mb-4 text-body">Si tu objetivo es lanzar una campaña publicitaria, promocionar un producto estrella o captar clientes de forma rápida, este servicio es el indicado. Diseño páginas únicas, ágiles y enfocadas 100% en captar la atención del visitante y guiarlo a realizar una acción concreta.</p>
-          <ul class="list-disc list-inside text-sm text-neutral-tertiary space-y-1">
+        <div class="p-6 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg shadow-sm transition-colors">
+          <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Landing page:</h3>
+          <p class="mb-4 text-gray-600 dark:text-gray-300">Si tu objetivo es lanzar una campaña publicitaria, promocionar un producto estrella o captar clientes de forma rápida, este servicio es el indicado. Diseño páginas únicas, ágiles y enfocadas 100% en captar la atención del visitante y guiarlo a realizar una acción concreta.</p>
+          <ul class="list-disc list-inside text-sm text-gray-500 dark:text-gray-400 space-y-1">
             <li><strong>Ideal para:</strong> Lanzamientos, ofertas especiales, campañas publicitarias y profesionales independientes.</li>
             <li><strong>Qué incluye:</strong> Diseño de alta velocidad, adaptado a celulares, estructura persuasiva y botones de contacto directo.</li>
           </ul>
         </div>
 
-        <div class="p-6 bg-neutral-primary border border-default rounded-base shadow-xs">
-          <h3 class="text-xl font-bold mb-2 text-heading">Sitios Web Institucionales:</h3>
-          <p class="mb-4 text-body">La carta de presentación digital que tu negocio necesita. Diseñado para marcas o negocios que necesitan transmitir solidez, confianza y profesionalismo a través de un sitio multi-sección.</p>
-          <ul class="list-disc list-inside text-sm text-neutral-tertiary space-y-1">
+        <div class="p-6 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg shadow-sm transition-colors">
+          <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Sitios Web Institucionales:</h3>
+          <p class="mb-4 text-gray-600 dark:text-gray-300">La carta de presentación digital que tu negocio necesita. Diseñado para marcas o negocios que necesitan transmitir solidez, confianza y profesionalismo a través de un sitio multi-sección.</p>
+          <ul class="list-disc list-inside text-sm text-gray-500 dark:text-gray-400 space-y-1">
             <li><strong>Ideal para:</strong> PYMES, comercios, empresas consolidadas o profesionales que prestan múltiples servicios.</li>
             <li><strong>Qué incluye:</strong> Arquitectura multi-página, diseño personalizado adaptado a tu identidad visual, mapas interactivos, formularios y optimización para buscadores.</li>
           </ul>
@@ -90,100 +113,99 @@
 
     <!-- Proyectos -->
     <section id="proyectos" class="max-w-screen-xl mx-auto p-4 my-8">
-      <h2 class="text-3xl font-extrabold my-4 text-heading">Proyectos</h2>
-      <p class="mb-6 text-body">Desarrollo soluciones web funcionales que abarcan desde plataformas comerciales a medida hasta interfaces creativas enfocadas en la experiencia de usuario.</p>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-      <!-- Proyecto 1 -->
-      <div class="bg-neutral-primary border border-default rounded-base shadow-xs overflow-hidden flex flex-col justify-between project-card">
-          <a href="#">
-              <img class="card-img"src="../Portafolio LM - Studio/img/Fansite_twice.png" alt="Fansite Twice" />
-          </a>
-          <div class="p-6 text-center">
-              <span class="inline-flex items-center bg-brand-softer border border-brand-subtle text-fg-brand-strong text-xs font-medium px-2 py-1 rounded-sm mb-3">
-                  Proyecto Destacado
-              </span>
-              <h3 class="text-2xl font-bold mb-3 text-heading">Proyecto 1: Fansite Dedicado a Twice</h3>
-              <p class="mb-4 text-body text-sm leading-relaxed">
-                  Proyecto final desarrollado para el curso de Desarrollo Web en CoderHouse, donde diseñé y maqueté un sitio web interactivo e informativo inspirado en la trayectoria de TWICE.
-              </p>
-              <p class="mb-3 text-body text-xs text-neutral-tertiary leading-relaxed">
-                  <strong>Puntos clave:</strong> Estructuración HTML semántica, diseño responsive (CSS/SASS), arquitectura visual orientada a UX y despliegue web.
-              </p>
-              <div class="mb-6 text-body text-xs text-neutral-tertiary flex items-center justify-center space-x-2">
-                  <strong>Tecnologías utilizadas:</strong>
-                  <img src="../Portafolio LM - Studio/img/html5.svg" alt="HTML5" class="w-4 h-4">
-                  <img src="../Portafolio LM - Studio/img/css3.svg" alt="CSS3" class="w-4 h-4">
-                  <img src="../Portafolio LM - Studio/img/sass.svg" alt="SASS" class="w-4 h-4">
-                  <img src="../Portafolio LM - Studio/img/bootstrap.svg" alt="Bootstrap" class="w-4 h-4">
+      <h2 class="text-3xl font-extrabold my-4 text-gray-900 dark:text-white">Proyectos</h2>
+      <p class="mb-6 text-gray-600 dark:text-gray-300">Desarrollo soluciones web funcionales que abarcan desde plataformas comerciales a medida hasta interfaces creativas enfocadas en la experiencia de usuario.</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+        <!-- Proyecto 1 -->
+        <div class="bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg shadow-sm overflow-hidden flex flex-col justify-between project-card transition-colors">
+            <div>
+              <a href="#">
+                  <img class="card-img" src="../Portafolio LM - Studio/img/Fansite_twice.png" alt="Fansite Twice" />
+              </a>
+              <div class="p-6 text-center">
+                  <span class="inline-flex items-center bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-300 text-xs font-medium px-2 py-1 rounded-sm mb-3">
+                      Proyecto Destacado
+                  </span>
+                  <h3 class="text-2xl font-bold mb-3 text-gray-900 dark:text-white">Proyecto 1: Fansite Dedicado a Twice</h3>
+                  <p class="mb-4 text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                      Proyecto final desarrollado para el curso de Desarrollo Web en CoderHouse, donde diseñé y maqueté un sitio web interactivo e informativo inspirado en la trayectoria de TWICE.
+                  </p>
+                  <p class="mb-3 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+                      <strong>Puntos clave:</strong> Estructuración HTML semántica, diseño responsive (CSS/SASS), arquitectura visual orientada a UX y despliegue web.
+                  </p>
+                  <div class="mb-6 text-xs text-gray-500 dark:text-gray-400 flex items-center justify-center space-x-2">
+                      <strong>Tecnologías utilizadas:</strong>
+                      <img src="../Portafolio LM - Studio/img/html5.svg" alt="HTML5" class="w-4 h-4">
+                      <img src="../Portafolio LM - Studio/img/css3.svg" alt="CSS3" class="w-4 h-4">
+                      <img src="../Portafolio LM - Studio/img/sass.svg" alt="SASS" class="w-4 h-4">
+                      <img src="../Portafolio LM - Studio/img/bootstrap.svg" alt="Bootstrap" class="w-4 h-4">
+                  </div>
               </div>
-              <a href="#" class="inline-flex items-center text-black bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
+            </div>
+            <div class="p-6 pt-0 text-center">
+              <a href="#" class="inline-flex items-center text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-4 py-2.5 focus:outline-none transition-colors">
                   Ver más
                   <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/></svg>
               </a>
-          </div>
-      </div>
-      <!-- Proyecto 2 -->
-      <div class="bg-neutral-primary border border-default rounded-base shadow-xs overflow-hidden flex flex-col justify-between project-card">
-          <a href="https://ulicel.netlify.app/" target="_blank">
-              <img class="card-img" src="../Portafolio LM - Studio/img/Ulicel.png" alt="Ulicel" />
-          </a>
-          <div class="p-6 text-center">
-              <span class="inline-flex items-center bg-brand-softer border border-brand-subtle text-fg-brand-strong text-xs font-medium px-2 py-1 rounded-sm mb-3">
-                  Proyecto Destacado
-              </span>
-              <h3 class="text-2xl font-bold mb-3 text-heading">Proyecto 2: Sitio Web para Servicio Técnico Ulicel</h3>
-              <p class="mb-4 text-body text-sm leading-relaxed">
-                  Sitio web comercial desarrollado a medida para el negocio de reparación de celulares Ulicel, orientado a digitalizar la presencia de la marca y la atención al cliente.
-              </p>
-              <p class="mb-3 text-body text-xs text-neutral-tertiary leading-relaxed">
-                  <strong>Puntos clave:</strong> Maquetación modular multidispositivo, optimización gráfica SVG, formularios de atención integrados y control de versiones con Git.
-              </p>
-              <div class="mb-6 text-body text-xs text-neutral-tertiary flex items-center justify-center space-x-2">
-                  <strong>Tecnologías utilizadas:</strong>
-                  <img src="../Portafolio LM - Studio/img/html5.svg" alt="HTML5" class="w-4 h-4">
-                  <img src="../Portafolio LM - Studio/img/css3.svg" alt="CSS3" class="w-4 h-4">
-                  <img src="../Portafolio LM - Studio/img/js.svg" alt="JavaScript" class="w-4 h-4">
-                  <img src="../Portafolio LM - Studio/img/tailwind.svg" alt="Tailwind CSS" class="w-4 h-4">
+            </div>
+        </div>
+
+        <!-- Proyecto 2 -->
+        <div class="bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg shadow-sm overflow-hidden flex flex-col justify-between project-card transition-colors">
+            <div>
+              <a href="https://ulicel.netlify.app/" target="_blank" rel="noopener noreferrer">
+                  <img class="card-img" src="../Portafolio LM - Studio/img/Ulicel.png" alt="Ulicel" />
+              </a>
+              <div class="p-6 text-center">
+                  <span class="inline-flex items-center bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-300 text-xs font-medium px-2 py-1 rounded-sm mb-3">
+                      Proyecto Destacado
+                  </span>
+                  <h3 class="text-2xl font-bold mb-3 text-gray-900 dark:text-white">Proyecto 2: Sitio Web para Servicio Técnico Ulicel</h3>
+                  <p class="mb-4 text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                      Sitio web comercial desarrollado a medida para el negocio de reparación de celulares Ulicel, orientado a digitalizar la presencia de la marca y la atención al cliente.
+                  </p>
+                  <p class="mb-3 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+                      <strong>Puntos clave:</strong> Maquetación modular multidispositivo, optimización gráfica SVG, formularios de atención integrados y control de versiones con Git.
+                  </p>
+                  <div class="mb-6 text-xs text-gray-500 dark:text-gray-400 flex items-center justify-center space-x-2">
+                      <strong>Tecnologías utilizadas:</strong>
+                      <img src="../Portafolio LM - Studio/img/html5.svg" alt="HTML5" class="w-4 h-4">
+                      <img src="../Portafolio LM - Studio/img/css3.svg" alt="CSS3" class="w-4 h-4">
+                      <img src="../Portafolio LM - Studio/img/js.svg" alt="JavaScript" class="w-4 h-4">
+                      <img src="../Portafolio LM - Studio/img/tailwind.svg" alt="Tailwind CSS" class="w-4 h-4">
+                  </div>
               </div>
-              <a href="https://ulicel.netlify.app/" target="_blank" class="inline-flex items-center text-black bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">
-                  Ver mas
+            </div>
+            <div class="p-6 pt-0 text-center">
+              <a href="https://ulicel.netlify.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-4 py-2.5 focus:outline-none transition-colors">
+                  Ver más
                   <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/></svg>
               </a>
-          </div>
+            </div>
+        </div>
       </div>
-    </div>
     </section>
 
     <!-- Opiniones -->
-    <section id="opiniones" class="py-12 bg-neutral-primary border-y border-default">
+    <section id="opiniones" class="py-12 bg-gray-100 dark:bg-slate-800/50 border-y border-gray-200 dark:border-slate-800 transition-colors">
       <div class="max-w-screen-xl px-4 mx-auto text-center">
-        <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-heading md:text-4xl">
+        <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white md:text-4xl">
           Lo que dicen mis clientes
         </h2>
-        <p class="mb-8 text-body text-base max-w-2xl mx-auto">
+        <p class="mb-8 text-gray-600 dark:text-gray-300 text-base max-w-2xl mx-auto">
           La satisfacción y la confianza en cada entrega son mi prioridad. Esto es lo que opinan sobre trabajar conmigo:
         </p>
 
         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <div class="p-6 bg-neutral-secondary-soft border border-default rounded-base shadow-xs flex flex-col justify-between">
+          <div class="p-6 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg shadow-sm flex flex-col justify-between transition-colors">
             <div>
               <div class="flex justify-center mb-4 text-yellow-400 space-x-1">★★★★★</div>
-              <p class="mb-4 text-body text-sm italic">"Excelente trabajo maquetando nuestra página. Se entregó a tiempo, con un diseño impecable y totalmente responsivo."</p>
+              <p class="mb-4 text-gray-600 dark:text-gray-300 text-sm italic">"Excelente trabajo maquetando nuestra página. Se entregó a tiempo, con un diseño impecable y totalmente responsivo."</p>
             </div>
-            <div class="font-medium text-heading text-sm mt-4">
+            <div class="font-medium text-gray-900 dark:text-white text-sm mt-4">
               Carlos Gutiérrez
-              <span class="block text-xs text-neutral-tertiary">Fundador de MiEmpresa</span>
-            </div>
-          </div>
-
-          <div class="p-6 bg-neutral-secondary-soft border border-default rounded-base shadow-xs flex flex-col justify-between">
-            <div>
-              <div class="flex justify-center mb-4 text-yellow-400 space-x-1">★★★★★</div>
-              <p class="mb-4 text-body text-sm italic">"Muy profesional en la comunicación y entendió rápido lo que necesitábamos para la landing page. Altamente recomendado."</p>
-            </div>
-            <div class="font-medium text-heading text-sm mt-4">
-              María Fernández
-              <span class="block text-xs text-neutral-tertiary">Diseñadora UX/UI</span>
+              <span class="block text-xs text-gray-500 dark:text-gray-400">Fundador de MiEmpresa</span>
             </div>
           </div>
         </div>
@@ -192,38 +214,38 @@
 
     <!-- Contacto -->
     <section id="contacto" class="max-w-screen-md mx-auto p-4 my-12">
-      <h2 class="text-3xl font-extrabold text-center mb-6 text-heading">Contacto</h2>
+      <h2 class="text-3xl font-extrabold text-center mb-6 text-gray-900 dark:text-white">Contacto</h2>
       
-      <form action="#" method="POST" class="bg-neutral-primary p-6 border border-default rounded-base shadow-xs space-y-4 mb-6">
+      <form action="#" method="POST" class="bg-white dark:bg-slate-800 p-6 border border-gray-200 dark:border-slate-700 rounded-lg shadow-sm space-y-4 mb-6 transition-colors">
         <div>
-          <label for="name" class="block mb-2 text-sm font-medium text-heading">Nombre</label>
-          <input type="text" id="name" name="name" class="bg-neutral-secondary-soft border border-default text-heading text-sm rounded-base block w-full p-2.5 focus:ring-brand focus:border-brand" required>
+          <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre</label>
+          <input type="text" id="name" name="name" class="bg-gray-50 dark:bg-slate-700 border border-gray-300 dark:border-slate-600 text-gray-900 dark:text-white text-sm rounded-lg block w-full p-2.5 focus:ring-blue-500 focus:border-blue-500" required>
         </div>
         <div>
-          <label for="numero" class="block mb-2 text-sm font-medium text-heading">Número de teléfono</label>
-          <input type="tel" id="numero" name="numero" class="bg-neutral-secondary-soft border border-default text-heading text-sm rounded-base block w-full p-2.5 focus:ring-brand focus:border-brand" required>
+          <label for="numero" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Número de teléfono</label>
+          <input type="tel" id="numero" name="numero" class="bg-gray-50 dark:bg-slate-700 border border-gray-300 dark:border-slate-600 text-gray-900 dark:text-white text-sm rounded-lg block w-full p-2.5 focus:ring-blue-500 focus:border-blue-500" required>
         </div>
         <div>
-          <label for="email" class="block mb-2 text-sm font-medium text-heading">Correo electrónico</label>
-          <input type="email" id="email" name="email" class="bg-neutral-secondary-soft border border-default text-heading text-sm rounded-base block w-full p-2.5 focus:ring-brand focus:border-brand">
+          <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Correo electrónico</label>
+          <input type="email" id="email" name="email" class="bg-gray-50 dark:bg-slate-700 border border-gray-300 dark:border-slate-600 text-gray-900 dark:text-white text-sm rounded-lg block w-full p-2.5 focus:ring-blue-500 focus:border-blue-500">
         </div>
         <div>
-          <label for="servicio" class="block mb-2 text-sm font-medium text-heading">Tipo de servicio</label>
-          <select id="servicio" name="servicio" class="bg-neutral-secondary-soft border border-default text-heading text-sm rounded-base block w-full p-2.5 focus:ring-brand focus:border-brand" required>
+          <label for="servicio" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tipo de servicio</label>
+          <select id="servicio" name="servicio" class="bg-gray-50 dark:bg-slate-700 border border-gray-300 dark:border-slate-600 text-gray-900 dark:text-white text-sm rounded-lg block w-full p-2.5 focus:ring-blue-500 focus:border-blue-500" required>
             <option value="">Seleccionar un servicio</option>
             <option value="landing">Landing Page</option>
             <option value="institucional">Página Institucional</option>
           </select>
         </div>
-        <button type="submit" class="w-full text-black bg-brand hover:bg-brand-strong font-medium rounded-base text-sm px-5 py-3 text-center">Enviar mensaje</button>
+        <button type="submit" class="w-full text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-5 py-3 text-center transition-colors">Enviar mensaje</button>
       </form>
 
       <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
-        <a href="https://wa.me/5493878123456" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-green-600 hover:text-green-700 font-medium">
+        <a href="https://wa.me/5493878123456" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-green-600 dark:text-green-400 hover:underline font-medium">
           <img src="../Portafolio LM - Studio/img/whatsapp.svg" alt="WhatsApp" class="w-5 h-5 me-2">
           Escribir por WhatsApp
         </a>
-        <a href="mailto:tu-email@dominio.com" class="inline-flex items-center text-body hover:text-fg-brand font-medium">
+        <a href="mailto:tu-email@dominio.com" class="inline-flex items-center text-gray-700 dark:text-gray-300 hover:underline font-medium">
           <img src="../Portafolio LM - Studio/img/gmail.svg" alt="Email" class="w-5 h-5 me-2">
           Escribir por Mail
         </a>
@@ -231,10 +253,10 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-neutral-primary rounded-base shadow-xs border border-default m-4">
+    <footer class="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-gray-200 dark:border-slate-700 m-4 transition-colors">
         <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-          <span class="text-sm text-body sm:text-center">© 2026 <a href="#inicio" class="hover:underline">LM Studio</a>. Todos los derechos reservados.</span>
-          <ul class="flex flex-wrap items-center text-sm font-medium text-body mt-3 sm:mt-0">
+          <span class="text-sm text-gray-500 dark:text-gray-400 sm:text-center">© 2026 <a href="#inicio" class="hover:underline">LM Studio</a>. Todos los derechos reservados.</span>
+          <ul class="flex flex-wrap items-center text-sm font-medium text-gray-500 dark:text-gray-400 mt-3 sm:mt-0">
             <li><a href="#inicio" class="hover:underline me-4 md:me-6">Inicio</a></li>
             <li><a href="#servicios" class="hover:underline me-4 md:me-6">Servicios</a></li>
             <li><a href="#proyectos" class="hover:underline me-4 md:me-6">Proyectos</a></li>
@@ -245,5 +267,6 @@
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+  <script src="../Portafolio LM - Studio/script.js"></script>
 </body>
 </html>
