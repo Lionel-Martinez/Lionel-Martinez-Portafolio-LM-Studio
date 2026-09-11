@@ -46,47 +46,42 @@
   </div>
 
 <!-- Navegación -->
-<nav class="fixed w-full z-20 top-0 start-0 border-b-2 border-black dark:border-white bg-white/95 dark:bg-slate-900/95 backdrop-blur-md transition-colors">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-    
-    <!-- Logo -->
-    <a href="#inicio" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <img src="./img/logo.png" class="h-7" alt="LM Studio Logo">
-        <span class="self-center text-xl text-gray-900 dark:text-white font-semibold whitespace-nowrap">LM Studio</span>
-    </a>
-
-    <!-- Botones Derecha -->
-    <div class="flex md:order-2 space-x-2 rtl:space-x-reverse items-center">
-        <!-- BOTÓN MODO OSCURO -->
-        <button id="theme-toggle" type="button" class="flex items-center gap-2 text-black dark:text-white bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 border-2 border-black dark:border-white font-semibold rounded-lg text-xs px-3 py-2 cursor-pointer transition-colors">
-            <span id="theme-toggle-text">Modo Oscuro</span>
-            <svg id="theme-toggle-dark-icon" class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+<nav class="fixed w-full z-40 top-0 border-b-2 border-black dark:border-white bg-white/95 dark:bg-slate-900/95 backdrop-blur-md transition-colors" aria-label="Navegación principal">
+  <!-- Logo -->
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="#inicio" class="flex items-center gap-3" aria-label="LM Studio, inicio">
+        <img src="./img/logo.png" class="h-8 w-auto" alt="Logo de LM Studio">
+        <span class="text-xl text-gray-900 dark:text-white font-semibold whitespace-nowrap">LM Studio</span>
+      </a>
+    <!-- Botones de navegación -->
+      <div class="flex md:order-2 space-x-2 items-center">
+        <button id="theme-toggle" type="button" class="flex items-center gap-2 text-black dark:text-white bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 border-2 border-black dark:border-white font-semibold rounded-lg text-xs px-3 py-2 cursor-pointer transition-colors" aria-label="Cambiar tema">
+          <span id="theme-toggle-text">Modo Oscuro</span>
+          <svg id="theme-toggle-dark-icon" class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+          <svg id="theme-toggle-light-icon" class="hidden w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z"></path></svg>
         </button>
 
-        <!-- Botón Menú Móvil -->
         <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-900 dark:text-gray-100 border-2 border-black dark:border-white rounded-lg md:hidden hover:bg-gray-100 dark:hover:bg-slate-800" aria-controls="navbar-sticky" aria-expanded="false">
-            <span class="sr-only">Abrir menú</span>
-            <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
+          <span class="sr-only">Abrir menú</span>
+          <svg class="w-6 h-6" aria-hidden="true" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"></path></svg>
         </button>
+      </div>
+<!-- Enlaces de navegación -->
+      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+        <ul class="flex flex-col p-4 md:p-0 mt-4 font-semibold border-2 border-black dark:border-white rounded-lg bg-gray-50 dark:bg-slate-800 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:md:bg-transparent">
+          <li><a href="#inicio" class="nav-link">Inicio</a></li>
+          <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
+          <li><a href="#servicios" class="nav-link">Servicios</a></li>
+          <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+          <li><a href="#proceso" class="nav-link">Cómo trabajo</a></li>
+          <li><a href="#opiniones" class="nav-link">Opiniones</a></li>
+          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
-    <!-- Enlaces -->
-    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-      <ul class="flex flex-col p-4 md:p-0 mt-4 font-semibold border-2 border-black dark:border-white rounded-lg bg-gray-50 dark:bg-slate-800 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:md:bg-transparent">
-        <li><a href="#inicio" class="block py-2 px-3 text-gray-900 dark:text-white rounded hover:text-blue-600 dark:hover:text-blue-400 md:p-0">Inicio</a></li>
-        <li><a href="#inicio" class="block py-2 px-3 text-gray-900 dark:text-white rounded hover:text-blue-600 dark:hover:text-blue-400 md:p-0">¿Quién soy?</a></li>
-        <li><a href="#servicios" class="block py-2 px-3 text-gray-900 dark:text-white rounded hover:text-blue-600 dark:hover:text-blue-400 md:p-0">Servicios</a></li>
-        <li><a href="#proyectos" class="block py-2 px-3 text-gray-900 dark:text-white rounded hover:text-blue-600 dark:hover:text-blue-400 md:p-0">Proyectos</a></li>
-        <li><a href="#opiniones" class="block py-2 px-3 text-gray-900 dark:text-white rounded hover:text-blue-600 dark:hover:text-blue-400 md:p-0">Opiniones</a></li>
-        <li><a href="#contacto" class="block py-2 px-3 text-gray-900 dark:text-white rounded hover:text-blue-600 dark:hover:text-blue-400 md:p-0">Contacto</a></li>
-      </ul>
-    </div>
-
-  </div>
-</nav>
-
-  <!-- Contenido principal -->
+<!-- Contenido principal -->
   <main class="pt-16">
     
     <!-- Inicio / Quién soy -->
