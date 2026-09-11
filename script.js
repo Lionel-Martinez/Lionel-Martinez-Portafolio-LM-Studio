@@ -3,67 +3,101 @@ document.addEventListener('DOMContentLoaded', () => {
   const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
   const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
   const themeToggleText = document.getElementById('theme-toggle-text');
+  const root = document.documentElement;
 
-  // Función para alternar las clases de modo oscuro
-  function setDarkTheme(isDark) {
-    if (isDark) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('color-theme', 'dark');
-      if (themeToggleDarkIcon) themeToggleDarkIcon.classList.add('hidden');
-      if (themeToggleLightIcon) themeToggleLightIcon.classList.remove('hidden');
-      if (themeToggleText) themeToggleText.textContent = 'Modo Claro';
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('color-theme', 'light');
-      if (themeToggleLightIcon) themeToggleLightIcon.classList.add('hidden');
-      if (themeToggleDarkIcon) themeToggleDarkIcon.classList.remove('hidden');
-      if (themeToggleText) themeToggleText.textContent = 'Modo Oscuro';
-    }
+  function updateThemeUI(isDark) {
+    root.classList.toggle('dark', isDark);
+    localStorage.setItem('color-theme', isDark ? 'dark' : 'light');
+    if (themeToggleDarkIcon) themeToggleDarkIcon.classList.toggle('hidden', isDark);
+    if (themeToggleLightIcon) themeToggleLightIcon.classList.toggle('hidden', !isDark);
+    if (themeToggleText) themeToggleText.textContent = isDark ? 'Modo Claro' : 'Modo Oscuro';
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', isDark ? '#0f172a' : '#f9fafb');
   }
 
-  // Verificación del tema preferido o guardado
   const savedTheme = localStorage.getItem('color-theme');
-  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const initialDark = savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  updateThemeUI(initialDark);
 
-  if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
-    setDarkTheme(true);
-  } else {
-    setDarkTheme(false);
-  }
+  themeToggleBtn?.addEventListener('click', () => {
+    updateThemeUI(!root.classList.contains('dark'));
+  });
 
-  // Evento de clic en el botón de alternancia
-  if (themeToggleBtn) {
-    themeToggleBtn.addEventListener('click', () => {
-      const isCurrentlyDark = document.documentElement.classList.contains('dark');
-      setDarkTheme(!isCurrentlyDark);
-    });
-  }
-
-  // Cierre automático del menú móvil al hacer clic en enlaces
+  // Cerrar el menú móvil al seleccionar una sección.
   document.querySelectorAll('#navbar-sticky a').forEach(link => {
     link.addEventListener('click', () => {
       const navbar = document.getElementById('navbar-sticky');
-      if (navbar && !navbar.classList.contains('hidden')) {
+      if (navbar && window.innerWidth < 768) {
         navbar.classList.add('hidden');
       }
     });
   });
+
+  // Evita que el loader quede visible si una animación o recurso externo falla.
+  hideLoader();
+  window.addEventListener('load', hideLoader, { once: true });
+  setTimeout(hideLoader, 1200);
+
+  // ==========================================
+  // RESEÑAS APROBADAS
+  // ==========================================
+  // Para agregar una reseña nueva:
+  // 1. Verificá que sea real.
+  // 2. Contá con autorización para publicarla.
+  // 3. Copiá el formato de abajo y cambiá los datos.
+  // 4. Guardá el archivo y publicá los cambios.
+  // ==========================================
+  const approvedReviews = [
+    // Nueva reseña:
+    // {
+    //   name: "Nombre del cliente",
+    //   role: "Cargo · Empresa",
+    //   rating: 5,
+    //   comment: "Comentario real del cliente.",
+    //   date: "2026-09-10"
+    // }
+  ];
+  renderReviews(approvedReviews);
 });
 
-// Ocultar pantalla de carga (Loader Rubik)
 function hideLoader() {
   const loader = document.getElementById('loader-wrapper');
-  if (loader && !loader.classList.contains('opacity-0')) {
-    loader.classList.add('opacity-0', 'pointer-events-none');
-    setTimeout(() => {
-      loader.style.display = 'none';
-    }, 500);
-  }
+  if (!loader || loader.dataset.hidden === 'true') return;
+  loader.dataset.hidden = 'true';
+  loader.classList.add('opacity-0', 'pointer-events-none');
+  setTimeout(() => { loader.style.display = 'none'; }, 500);
 }
 
-// Se ejecuta al cargar el DOM o las imágenes
-document.addEventListener('DOMContentLoaded', hideLoader);
-window.addEventListener('load', hideLoader);
 
-// Respaldo de seguridad: Forzar ocultado tras 1.5 segundos por si falla alguna ruta
-setTimeout(hideLoader, 1500);
+function renderReviews(reviews) {
+  const container = document.getElementById('reviews-list');
+  if (!container || !Array.isArray(reviews) || reviews.length === 0) return;
+
+  container.innerHTML = '';
+
+  reviews.forEach(review => {
+    const article = document.createElement('article');
+    article.className = 'review-card';
+
+    const stars = document.createElement('div');
+    stars.className = 'review-stars';
+    stars.setAttribute('aria-label', `${review.rating} de 5 estrellas`);
+    stars.textContent = '★'.repeat(review.rating) + '☆'.repeat(5 - review.rating);
+
+    const quote = document.createElement('blockquote');
+    quote.textContent = `“${review.comment}”`;
+
+    const author = document.createElement('p');
+    author.className = 'review-author';
+    author.textContent = review.name;
+
+    article.append(stars, quote, author);
+    if (review.role) {
+      const role = document.createElement('span');
+      role.className = 'review-role';
+      role.textContent = review.role;
+      author.append(' · ', role);
+    }
+
+    container.appendChild(article);
+  });
+}
