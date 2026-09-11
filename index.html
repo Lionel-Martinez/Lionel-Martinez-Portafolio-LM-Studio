@@ -235,26 +235,21 @@
     </section>
 
     <!-- Opiniones -->
-    <section id="opiniones" class="py-12 bg-gray-100 dark:bg-slate-800/50 border-y-2 border-black dark:border-white transition-colors">
-      <div class="max-w-screen-xl px-4 mx-auto text-center">
-        <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white md:text-4xl">
-          Lo que dicen mis clientes
-        </h2>
-        <p class="mb-8 text-gray-700 dark:text-gray-300 text-base max-w-2xl mx-auto">
-          La satisfacción y la confianza en cada entrega son mi prioridad. Esto es lo que opinan sobre trabajar conmigo:
-        </p>
+    <section id="opiniones" class="section-band section-anchor">
+      <div class="max-w-screen-xl mx-auto px-4 py-16 md:py-20">
+        <div class="section-heading">
+          <span class="section-label">Opiniones</span>
+          <h2 class="section-title">Lo que dicen quienes trabajaron conmigo</h2>
+          <p class="section-lead">Las reseñas reales ayudan a conocer cómo es trabajar conmigo. No publico testimonios sin autorización.</p>
+        </div>
 
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <div class="p-6 bg-white dark:bg-slate-800 border-2 border-black dark:border-white rounded-lg shadow-sm flex flex-col justify-between transition-colors">
-            <div>
-              <div class="flex justify-center mb-4 text-yellow-400 space-x-1">★★★★★</div>
-              <p class="mb-4 text-gray-700 dark:text-gray-300 text-sm italic">"Excelente trabajo maquetando nuestra página. Se entregó a tiempo, con un diseño impecable y totalmente responsivo."</p>
-            </div>
-            <div class="font-bold text-gray-900 dark:text-white text-sm mt-4">
-              Carlos Gutiérrez
-              <span class="block text-xs font-normal text-gray-600 dark:text-gray-400">Fundador de MiEmpresa</span>
-            </div>
-          </div>
+        <div id="reviews-list" class="reviews-list" aria-live="polite"></div>
+
+        <div class="reviews-invite">
+          <div class="review-stars" aria-hidden="true">★★★★★</div>
+          <h3>¿Ya trabajamos juntos?</h3>
+          <p>Me gustaría conocer tu experiencia. Podés dejarme una reseña y, con tu autorización, puedo publicarla en este apartado.</p>
+          <a href="./formulario.html" class="hero-button primary">Dejar una reseña <span aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>
