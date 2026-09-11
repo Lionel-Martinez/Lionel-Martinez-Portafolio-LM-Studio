@@ -186,77 +186,50 @@
 
 
     <!-- Proyectos -->
-    <section id="proyectos" class="max-w-screen-xl mx-auto p-4 my-8">
-      <h2 class="text-3xl font-extrabold my-4 text-gray-900 dark:text-white">Proyectos</h2>
-      <p class="mb-6 text-gray-700 dark:text-gray-300">Desarrollo soluciones web funcionales que abarcan desde plataformas comerciales a medida hasta interfaces creativas enfocadas en la experiencia de usuario.</p>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-        <!-- Proyecto 1 -->
-        <div class="bg-white dark:bg-slate-800 border-2 border-black dark:border-white rounded-lg shadow-sm overflow-hidden flex flex-col justify-between project-card transition-colors">
-            <div>
-              <a href="#">
-                  <img class="card-img border-b-2 border-black dark:border-white" src="./img/Fansite_twice.png" alt="Fansite Twice" />
-              </a>
-              <div class="p-6 text-center">
-                  <span class="inline-flex items-center bg-blue-100 dark:bg-blue-900/50 text-blue-900 dark:text-blue-300 border border-black dark:border-white text-xs font-bold px-2.5 py-1 rounded-sm mb-3">
-                      Proyecto Destacado
-                  </span>
-                  <h3 class="text-2xl font-bold mb-3 text-gray-900 dark:text-white">Proyecto 1: Fansite Dedicado a Twice</h3>
-                  <p class="mb-4 text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
-                      Proyecto final desarrollado para el curso de Desarrollo Web en CoderHouse, donde diseñé y maqueté un sitio web interactivo e informativo inspirado en la trayectoria de TWICE.
-                  </p>
-                  <p class="mb-3 text-xs text-gray-800 dark:text-gray-300 leading-relaxed">
-                      <strong>Puntos clave:</strong> Estructuración HTML semántica, diseño responsive (CSS/SASS), arquitectura visual orientada a UX y despliegue web.
-                  </p>
-                  <div class="mb-6 text-xs text-gray-800 dark:text-gray-300 flex items-center justify-center space-x-2">
-                      <strong>Tecnologías utilizadas:</strong>
-                      <img src="./img/html5.svg" alt="HTML5" class="w-4 h-4">
-                      <img src="./img/css3.svg" alt="CSS3" class="w-4 h-4">
-                      <img src="./img/sass.svg" alt="SASS" class="w-4 h-4">
-                      <img src="./img/bootstrap.svg" alt="Bootstrap" class="w-4 h-4">
-                  </div>
-              </div>
-            </div>
-            <div class="p-6 pt-0 text-center">
-              <a href="https://lionel-martinez.github.io/Entrega-2.2/" class="inline-flex items-center text-white bg-blue-600 hover:bg-blue-700 border-2 border-black dark:border-white font-bold rounded-lg text-sm px-4 py-2.5 focus:outline-none transition-colors">
-                  Ver más
-                  <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/></svg>
-              </a>
-            </div>
-        </div>
+    <section id="proyectos" class="section-band section-anchor">
+      <div class="max-w-screen-xl mx-auto px-4 py-16 md:py-20">
+        <span class="section-label">Portfolio</span>
+        <h2 class="section-title">Proyectos</h2>
+        <p class="section-lead">Una selección de proyectos en los que pude practicar diseño, maquetación, responsive y desarrollo web.</p>
 
-        <!-- Proyecto 2 -->
-        <div class="bg-white dark:bg-slate-800 border-2 border-black dark:border-white rounded-lg shadow-sm overflow-hidden flex flex-col justify-between project-card transition-colors">
-            <div>
-              <a href="https://ulicel.netlify.app/" target="_blank" rel="noopener noreferrer">
-                  <img class="card-img border-b-2 border-black dark:border-white" src="./img/Ulicel.png" alt="Ulicel" />
-              </a>
-              <div class="p-6 text-center">
-                  <span class="inline-flex items-center bg-blue-100 dark:bg-blue-900/50 text-blue-900 dark:text-blue-300 border border-black dark:border-white text-xs font-bold px-2.5 py-1 rounded-sm mb-3">
-                      Proyecto Destacado
-                  </span>
-                  <h3 class="text-2xl font-bold mb-3 text-gray-900 dark:text-white">Proyecto 2: Sitio Web para Servicio Técnico Ulicel</h3>
-                  <p class="mb-4 text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
-                      Sitio web comercial desarrollado a medida para el negocio de reparación de celulares Ulicel, orientado a digitalizar la presencia de la marca y la atención al cliente.
-                  </p>
-                  <p class="mb-3 text-xs text-gray-800 dark:text-gray-300 leading-relaxed">
-                      <strong>Puntos clave:</strong> Maquetación modular multidispositivo, optimización gráfica SVG, formularios de atención integrados y control de versiones con Git.
-                  </p>
-                  <div class="mb-6 text-xs text-gray-800 dark:text-gray-300 flex items-center justify-center space-x-2">
-                      <strong>Tecnologías utilizadas:</strong>
-                      <img src="./img/html5.svg" alt="HTML5" class="w-4 h-4">
-                      <img src="./img/css3.svg" alt="CSS3" class="w-4 h-4">
-                      <img src="./img/js.svg" alt="JavaScript" class="w-4 h-4">
-                      <img src="./img/tailwind.svg" alt="Tailwind CSS" class="w-4 h-4">
-                  </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+          <article class="project-card">
+            <a href="https://lionel-martinez.github.io/Entrega-2.2/" target="_blank" rel="noopener noreferrer" class="project-image-link">
+              <img class="card-img" src="./img/Fansite_twice.png" alt="Vista previa del fansite dedicado a TWICE" loading="lazy">
+            </a>
+            <div class="project-content">
+              <div class="project-meta"><span>Proyecto académico</span><span>Desarrollo Web</span></div>
+              <h3>Fansite dedicado a TWICE</h3>
+              <p>Proyecto final desarrollado durante mi formación en Desarrollo Web en CoderHouse. Diseñé y maqueté un sitio informativo inspirado en la trayectoria del grupo.</p>
+              <div class="project-details">
+                <div><strong>Rol</strong><span>Diseño y desarrollo</span></div>
+                <div><strong>Enfoque</strong><span>Responsive + UX</span></div>
               </div>
+              <div class="tech-row" aria-label="Tecnologías utilizadas">
+                <img src="./img/html5.svg" alt="HTML5"><img src="./img/css3.svg" alt="CSS3"><img src="./img/sass.svg" alt="Sass"><img src="./img/bootstrap.svg" alt="Bootstrap">
+              </div>
+              <a href="https://lionel-martinez.github.io/Entrega-2.2/" target="_blank" rel="noopener noreferrer" class="project-link">Ver proyecto <span aria-hidden="true">↗</span></a>
             </div>
-            <div class="p-6 pt-0 text-center">
-              <a href="https://ulicel.netlify.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-white bg-blue-600 hover:bg-blue-700 border-2 border-black dark:border-white font-bold rounded-lg text-sm px-4 py-2.5 focus:outline-none transition-colors">
-                  Ver más
-                  <svg class="w-4 h-4 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/></svg>
-              </a>
+          </article>
+
+          <article class="project-card">
+            <a href="https://ulicel.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-image-link">
+              <img class="card-img" src="./img/Ulicel.png" alt="Vista previa del sitio web de Ulicel" loading="lazy">
+            </a>
+            <div class="project-content">
+              <div class="project-meta"><span>Proyecto comercial</span><span>Servicio técnico</span></div>
+              <h3>Ulicel — Servicio técnico</h3>
+              <p>Sitio web desarrollado para un negocio de reparación de celulares, pensado para presentar sus servicios y facilitar el contacto con potenciales clientes.</p>
+              <div class="project-details">
+                <div><strong>Rol</strong><span>Diseño y desarrollo</span></div>
+                <div><strong>Enfoque</strong><span>Contacto + responsive</span></div>
+              </div>
+              <div class="tech-row" aria-label="Tecnologías utilizadas">
+                <img src="./img/html5.svg" alt="HTML5"><img src="./img/css3.svg" alt="CSS3"><img src="./img/js.svg" alt="JavaScript"><img src="./img/tailwind.svg" alt="Tailwind CSS">
+              </div>
+              <a href="https://ulicel.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-link">Ver proyecto <span aria-hidden="true">↗</span></a>
             </div>
+          </article>
         </div>
       </div>
     </section>
