@@ -5,30 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- SEO -->
-  <title>LM Studio | Desarrollo Web Freelance & Diseños Personalizados</title>
-  <meta name="description" content="Desarrollo páginas web institucionales, landing pages de alta conversión y soluciones digitales a medida. Maquetación limpia, rápida y adaptable a celulares.">
-  <meta name="keywords" content="desarrollo web, landing page, sitios institucionales, maquetación web, HTML, CSS, Tailwind CSS, freelancer web">
+  <title>LM Studio | Diseño y desarrollo web freelance</title>
+  <meta name="description" content="LM Studio: diseño y desarrollo de sitios web, landing pages y páginas institucionales para negocios, emprendimientos y proyectos personales.">
   <meta name="author" content="LM Studio">
   <meta name="robots" content="index, follow">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
 
   <!-- Open Graph / Redes Sociales -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://portafolio-lm-studio.netlify.app/">
-  <meta property="og:title" content="LM Studio | Desarrollo Web Freelance">
-  <meta property="og:description" content="Transformo tus ideas en sitios web funcionales, atractivos y optimizados para potenciar tu negocio.">
+  <meta property="og:title" content="LM Studio | Diseño y desarrollo web freelance">
+  <meta property="og:description" content="Sitios web modernos, responsive y pensados para las necesidades de cada proyecto.">
   <meta property="og:image" content="./img/logo.png">
 
   <!-- Favicon y Estilos (Rutas relativas fijadas) -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet"/>
   <link href="./style.css" rel="stylesheet"/>
   <link rel="icon" type="image/x-icon" href="./img/logo.png">
   
   <!-- CDN Tailwind + Configuración Dark Mode por clase -->
+  <script>
+    if (localStorage.getItem('color-theme') === 'dark' ||
+        (!localStorage.getItem('color-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = {
-      darkMode: 'class',
-    }
+    tailwind.config = { darkMode: 'class' };
   </script>
 </head>
 <body class="bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-gray-100 transition-colors duration-200">
