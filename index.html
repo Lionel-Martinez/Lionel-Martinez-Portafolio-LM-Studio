@@ -3,29 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- SEO -->
+  <meta name="theme-color" content="#f9fafb">
+
   <title>LM Studio | Diseño y desarrollo web freelance</title>
   <meta name="description" content="LM Studio: diseño y desarrollo de sitios web, landing pages y páginas institucionales para negocios, emprendimientos y proyectos personales.">
   <meta name="author" content="LM Studio">
   <meta name="robots" content="index, follow">
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
-
-  <!-- Open Graph / Redes Sociales -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://portafolio-lm-studio.netlify.app/">
   <meta property="og:title" content="LM Studio | Diseño y desarrollo web freelance">
   <meta property="og:description" content="Sitios web modernos, responsive y pensados para las necesidades de cada proyecto.">
   <meta property="og:image" content="./img/logo.png">
 
-  <!-- Favicon y Estilos (Rutas relativas fijadas) -->
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet"/>
-  <link href="./style.css" rel="stylesheet"/>
-  <link rel="icon" type="image/x-icon" href="./img/logo.png">
-  
-  <!-- CDN Tailwind + Configuración Dark Mode por clase -->
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet">
+  <link href="./style.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="./img/logo.png">
+
   <script>
     if (localStorage.getItem('color-theme') === 'dark' ||
         (!localStorage.getItem('color-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -37,23 +33,22 @@
     tailwind.config = { darkMode: 'class' };
   </script>
 </head>
-<body class="bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-gray-100 transition-colors duration-200">
 
-<!-- PANTALLA DE CARGA (Cubo Rubik 3D) -->
-<div id="loader-wrapper" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#222] transition-opacity duration-500" aria-hidden="true">
+<body class="bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-gray-100 transition-colors duration-200">
+  <!-- Loader -->
+  <div id="loader-wrapper" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#222] transition-opacity duration-500" aria-hidden="true">
     <div class="loader-logo" aria-hidden="true">LM</div>
     <p class="mt-5 text-white font-bold tracking-[0.25em] text-xs uppercase">LM Studio</p>
   </div>
 
-<!-- Navegación -->
-<nav class="fixed w-full z-40 top-0 border-b-2 border-black dark:border-white bg-white/95 dark:bg-slate-900/95 backdrop-blur-md transition-colors" aria-label="Navegación principal">
-  <!-- Logo -->
+  <!-- Navegación -->
+  <nav class="fixed w-full z-40 top-0 border-b-2 border-black dark:border-white bg-white/95 dark:bg-slate-900/95 backdrop-blur-md transition-colors" aria-label="Navegación principal">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       <a href="#inicio" class="flex items-center gap-3" aria-label="LM Studio, inicio">
         <img src="./img/logo.png" class="h-8 w-auto" alt="Logo de LM Studio">
         <span class="text-xl text-gray-900 dark:text-white font-semibold whitespace-nowrap">LM Studio</span>
       </a>
-    <!-- Botones de navegación -->
+
       <div class="flex md:order-2 space-x-2 items-center">
         <button id="theme-toggle" type="button" class="flex items-center gap-2 text-black dark:text-white bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 border-2 border-black dark:border-white font-semibold rounded-lg text-xs px-3 py-2 cursor-pointer transition-colors" aria-label="Cambiar tema">
           <span id="theme-toggle-text">Modo Oscuro</span>
@@ -66,7 +61,7 @@
           <svg class="w-6 h-6" aria-hidden="true" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"></path></svg>
         </button>
       </div>
-<!-- Enlaces de navegación -->
+
       <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
         <ul class="flex flex-col p-4 md:p-0 mt-4 font-semibold border-2 border-black dark:border-white rounded-lg bg-gray-50 dark:bg-slate-800 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:md:bg-transparent">
           <li><a href="#inicio" class="nav-link">Inicio</a></li>
@@ -81,9 +76,8 @@
     </div>
   </nav>
 
-<!-- Contenido principal -->
   <main class="pt-16">
-  <!-- Hero -->
+    <!-- Hero -->
     <section id="inicio" class="hero-section bg-center bg-no-repeat bg-cover bg-gray-700 bg-blend-multiply border-b-2 border-black dark:border-white" style="background-image: url('./img/HTML.jpg');">
       <div class="px-4 mx-auto max-w-screen-xl text-center py-24 md:py-32 lg:py-44">
         <span class="hero-kicker">LM STUDIO · DESARROLLO WEB FREELANCE</span>
@@ -120,7 +114,7 @@
       </div>
     </section>
 
-    <!-- Mis Servicios -->
+    <!-- Servicios -->
     <section id="servicios" class="section-band section-anchor">
       <div class="max-w-screen-xl mx-auto px-4 py-16 md:py-20">
         <span class="section-label">Servicios</span>
@@ -183,7 +177,6 @@
         </div>
       </div>
     </section>
-
 
     <!-- Proyectos -->
     <section id="proyectos" class="section-band section-anchor">
@@ -249,7 +242,7 @@
           <div class="review-stars" aria-hidden="true">★★★★★</div>
           <h3>¿Ya trabajamos juntos?</h3>
           <p>Me gustaría conocer tu experiencia. Podés dejarme una reseña y, con tu autorización, puedo publicarla en este apartado.</p>
-          <a href="./formulario.html" class="hero-button primary">Dejar una reseña <span aria-hidden="true">→</span></a>
+          <a href="./html/formulario.html" class="hero-button primary">Dejar una reseña <span aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>
@@ -270,7 +263,7 @@
       <h2 class="section-title">Contame qué necesitás</h2>
       <p class="section-lead">Podés escribirme por el formulario, WhatsApp o mail. Si todavía no tenés todo definido, no hay problema.</p>
 
-      <form action="https://api.web3forms.com/submit" method="POST">
+      <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
         <input type="hidden" name="access_key" value="32368aef-f51e-444b-b871-aa8eba61d03d">
         <input type="hidden" name="subject" value="Nuevo contacto desde LM Studio">
         <input type="hidden" name="from_name" value="LM Studio">
@@ -312,7 +305,6 @@
       </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
       <div class="max-w-screen-xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
         <span>© 2026 LM Studio. Todos los derechos reservados.</span>
