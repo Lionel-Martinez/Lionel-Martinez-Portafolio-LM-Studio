@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dejar una reseña | LM Studio</title>
+  <meta name="description" content="Dejá tu opinión sobre tu experiencia trabajando con LM Studio.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet">
+  <link href="../style.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="../img/logo.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { darkMode: 'class' }</script>
+</head>
+<body class="bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-gray-100 transition-colors duration-200">
+  <main class="min-h-screen flex items-center justify-center px-4 py-12">
+    <section class="review-form-card w-full max-w-2xl">
+      <a href="../index.html#opiniones" class="back-link">← Volver a LM Studio</a>
+      <div class="section-heading text-center mb-8">
+        <span class="section-label">Tu experiencia</span>
+        <h1 class="section-title">Dejame tu reseña</h1>
+        <p class="section-lead">Tu opinión me ayuda a mejorar y, si me autorizás, también puede aparecer en el portfolio.</p>
+      </div>
+
+      <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+        <input type="hidden" name="access_key" value="32368aef-f51e-444b-b871-aa8eba61d03d">
+        <input type="hidden" name="subject" value="Nueva reseña para LM Studio">
+        <input type="hidden" name="from_name" value="LM Studio - Reseñas">
+        <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" autocomplete="off">
+
+        <div class="form-grid">
+          <div>
+            <label for="nombre">Tu nombre o nombre del negocio</label>
+            <input type="text" id="nombre" name="nombre" autocomplete="name" minlength="2" maxlength="100" placeholder="Ej: Juan Pérez / Café Central" required>
+          </div>
+          <div>
+            <label for="cargo">Cargo o relación con el proyecto <span>(opcional)</span></label>
+            <input type="text" id="cargo" name="cargo" maxlength="100" placeholder="Ej: Cliente / Fundador / Colaborador">
+          </div>
+        </div>
+
+        <div>
+          <label for="estrellas">Calificación</label>
+          <select id="estrellas" name="estrellas" required>
+            <option value="5 ★★★★★">5 estrellas — Excelente</option>
+            <option value="4 ★★★★☆">4 estrellas — Muy bueno</option>
+            <option value="3 ★★★☆☆">3 estrellas — Bueno</option>
+            <option value="2 ★★☆☆☆">2 estrellas — Regular</option>
+            <option value="1 ★☆☆☆☆">1 estrella — Mejorable</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="comentario">Tu comentario</label>
+          <textarea id="comentario" name="comentario" rows="6" minlength="10" maxlength="800" placeholder="¿Qué te pareció el trabajo, la comunicación y el resultado?" required></textarea>
+        </div>
+
+        <label class="consent-check">
+          <input type="checkbox" name="autorizacion_publicacion" value="Sí, autorizo la publicación de mi reseña" required>
+          <span>Autorizo a LM Studio a publicar esta reseña en su portfolio.</span>
+        </label>
+
+        <button type="submit" class="hero-button primary w-full">Enviar reseña <span aria-hidden="true">→</span></button>
+        <p class="form-security-note">Tu reseña se envía para revisión. No se publica automáticamente.</p>
+      </form>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+</body>
+</html>
